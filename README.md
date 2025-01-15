@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Bzh4RYwL)
 
-
 G
+
 - [x] Få projektet att funka
 - [ ] CSS till Sass
 - [ ] Enhetlig namngivning i CSS:en
@@ -17,8 +17,9 @@ G
 - [ ] Rensa bort kod som inte ska sättas
 
 - [] Refaktorera namngivning
-  
+
 VG
+
 - [ ] Rätt sak på rätt plats
 - [ ] Hantera loggning på ett effektivt sätt
 - [ ] Gör en tillgänglighetsgranskning av sidan
