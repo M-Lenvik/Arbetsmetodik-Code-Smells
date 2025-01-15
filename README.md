@@ -2,8 +2,7 @@
 
 
 G
-- [x] En färdig uppgift markeras med ett x. Du kan radera denna exempelrad.
-- [ ] Få projektet att funka
+- [x] Få projektet att funka
 - [ ] CSS till Sass
 - [ ] Enhetlig namngivning i CSS:en
 - [ ] Konvertera till TypeScript
