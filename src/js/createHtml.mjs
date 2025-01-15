@@ -1,4 +1,4 @@
-import {getPodcasts} from './api'
+//import getPodcasts from './api.mjs';
 
 
 const podCastContainer = document.querySelector('.section__podlist-pods');
@@ -22,7 +22,7 @@ createImg();
     function createInnerArticle() {
         const innerArticle = document.createElement('article');
         innerArticle.setAttribute('class', 'section__article-innerarticle');
-            innerArticle.setAttribute('tabindex', '1')
+            innerArticle.setAttribute('tabindex', '1');
             podCastContainer.appendChild(innerArticle);
             return innerArticle;
     }
@@ -38,15 +38,15 @@ createImg();
         const linkPlacement = document.createElement('a');
         const linkText = document.createTextNode('Lyssna här');
         linkPlacement.setAttribute('href', podCasts.programs[i].programurl);
-        linkPlacement.setAttribute('tabindex', '1')
+        linkPlacement.setAttribute('tabindex', '1');
         linkPlacement.appendChild(linkText);
-        textDiv.appendChild(linkPlacement)
+        textDiv.appendChild(linkPlacement);
     }
     function createImg() {
         const imgPlacement = document.createElement('IMG');
         imgPlacement.setAttribute('src', podCasts.programs[i].socialimage);
         imgPlacement.setAttribute('width', '100');
-        imgPlacement.setAttribute('height', '100')
+        imgPlacement.setAttribute('height', '100');
         innerArticle.appendChild(imgPlacement);
     }
 
@@ -67,4 +67,4 @@ function createHeader() {
 })
 }
 
-export default createHtml
+//export {createHtml};
