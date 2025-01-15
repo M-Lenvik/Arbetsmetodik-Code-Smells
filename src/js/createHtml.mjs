@@ -1,7 +1,7 @@
-//import getPodcasts from './api.mjs';
+import getPodcasts from './api.mjs';
 
 
-const podCastContainer = document.querySelector('.section__podlist-pods');
+const podCastContainer = document.querySelector('#section__podlist-pods');
 
 let i = 0;
 
@@ -27,7 +27,7 @@ createImg();
             return innerArticle;
     }
 
-    function createTextiv() {
+    function createTextDiv() {
         const textDiv = document.createElement('div');
         textDiv.setAttribute('class', 'section__article-div');
         innerArticle.appendChild(textDiv);
