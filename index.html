@@ -1,31 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!--<link rel="stylesheet" href="./style.css" />-->
-    <!--    <meta name="viewport" content="widht=devlce-width, initia1-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <!--<link rel="stylesheet" href="./style.css" />-->
+        <!--    <meta name="viewport" content="widht=devlce-width, initia1-scale=1.0" />
 -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>SR Humorprogram</title>
-  </head>
-  <body>
-    <section class="section__podlist">
-      <button
-        class="section__podlist-button toggle-btn"
-        id="toggle-btn"
-        tabindex="1"
-      >
-        Välj ljust läge
-      </button>
-      <h1>SRs Humorprogram</h1>
-      <article class="section__podlist-pods" id="section__podlist-pods">
-        <!--Nytt-->
-        <div id="podcasts"></div>
-      </article>
-    </section>
-    <script type="module" src="/main.mjs"></script>
-  </body>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <title>SR Humorprogram</title>
+    </head>
+    <body>
+        <section class="podlist">
+            <button class="podlist__toggle-btn" id="toggle-btn" tabindex="1">
+                Välj ljust läge
+            </button>
+            <header>
+                <h1 class="podlist__title">SRs Humorprogram</h1>
+            </header>
+            <article class="podlist__pods" id="podlist-pods"></article>
+        </section>
+        <script type="module" src="/main.mjs"></script>
+    </body>
 </html>
