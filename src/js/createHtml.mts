@@ -1,4 +1,4 @@
-import getPodcasts from './api.mjs'
+import getPodcasts from './api.mts'
 
 const podCastContainer = document.querySelector('#podlist-pods')
 
