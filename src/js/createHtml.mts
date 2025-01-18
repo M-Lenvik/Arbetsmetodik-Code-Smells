@@ -26,7 +26,7 @@ export async function createHtml() {
             return innerArticle
         }
 
-        function createTextDiv() {
+        function createTextDiv() {  
             const textDiv = document.createElement('div')
             textDiv.setAttribute('class', 'podlist__pod-info')
             innerArticle.appendChild(textDiv)
@@ -46,6 +46,7 @@ export async function createHtml() {
             imgPlacement.setAttribute('src', podCasts.programs[i].socialimage)
             imgPlacement.setAttribute('width', '100')
             imgPlacement.setAttribute('height', '100')
+            imgPlacement.setAttribute('alt', podCasts.programs[i].name || 'Podcast-bild');
             innerArticle.appendChild(imgPlacement)
         }
 
