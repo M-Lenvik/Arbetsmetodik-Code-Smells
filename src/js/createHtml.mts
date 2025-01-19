@@ -31,7 +31,6 @@ export async function createHtml() {
     //Skapa artikel-element för varje podcast
     const innerArticle = createElement('article', {
       class: 'podlist__pod',
-      tabindex: '1',
     });
 
     //Skapa bild för podcast
@@ -59,8 +58,8 @@ export async function createHtml() {
     const link = createElement(
       'a',
       {
+        'aria-label': `Lyssna här till podden ${podcast.name}`, //Text som skärmuppläsaren läser upp
         href: podcast.programurl,
-        tabindex: '1',
       },
       'Lyssna här'
     );
