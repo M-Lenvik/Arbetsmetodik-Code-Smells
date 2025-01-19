@@ -35,7 +35,7 @@ export async function createHtml() {
 
   podCasts.programs.forEach((podcast) => {
     //Skapa artikel-element för varje podcast
-    const innerArticle = createElement('article', {
+    const podcastArticle = createElement('article', {
       class: 'podlist__pod',
     });
 
@@ -46,22 +46,22 @@ export async function createHtml() {
       height: '100',
       alt: podcast.name || 'Podcast-bild',
     });
-    innerArticle.appendChild(img);
+    podcastArticle.appendChild(img);
 
     //Skapa text container för info
-    const textDiv = createElement('div', { class: 'podlist__pod-info' });
-    innerArticle.appendChild(textDiv);
+    const podcastInfoDiv = createElement('div', { class: 'podlist__pod-info' });
+    podcastArticle.appendChild(podcastInfoDiv);
 
     //Lägg till rubrik
     const header = createElement('h2', {}, podcast.name);
-    textDiv.appendChild(header);
+    podcastInfoDiv.appendChild(header);
 
     //Lägg till beskrivning
-    const description = createElement('p', {}, podcast.description);
-    textDiv.appendChild(description);
+    const podcastDescription = createElement('p', {}, podcast.description);
+    podcastInfoDiv.appendChild(podcastDescription);
 
     //Lägg till länk
-    const link = createElement(
+    const startPodcastLink = createElement(
       'a',
       {
         'aria-label': `Lyssna här till podden ${podcast.name}`, //Text som skärmuppläsaren läser upp
@@ -69,9 +69,9 @@ export async function createHtml() {
       },
       'Lyssna här'
     );
-    textDiv.appendChild(link);
+    podcastInfoDiv.appendChild(startPodcastLink);
 
     //Lägg till hela artikeln i containern
-    podCastContainer.appendChild(innerArticle);
+    podCastContainer.appendChild(podcastArticle);
   });
 }

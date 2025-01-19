@@ -10,10 +10,10 @@ if (toggleLightModeButton) {
 
 export function toggleLightMode() {
   document.body.classList.toggle('theme--dark');
-  toggleButton();
+  updateToggleButtonText();
 }
 
-function toggleButton() {
+function updateToggleButtonText() {
   const isDarkMode = document.body.classList.contains('theme--dark');
 
   if (toggleLightModeButton) {
