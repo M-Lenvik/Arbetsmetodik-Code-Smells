@@ -10,14 +10,16 @@ if (toggleLightModeButton) {
 
 export function toggleLightMode() {
   document.body.classList.toggle('theme--dark');
-  buttonToggle();
+  toggleButton();
 }
 
-function buttonToggle() {
+function toggleButton() {
   const isDarkMode = document.body.classList.contains('theme--dark');
 
   if (toggleLightModeButton) {
-    toggleLightModeButton.innerHTML = isDarkMode ? 'Välj mörkt läge' : 'Välj ljust läge';
+    toggleLightModeButton.innerHTML = isDarkMode
+      ? 'Välj mörkt läge'
+      : 'Välj ljust läge';
   }
   console.log(isDarkMode ? 'Mörkt läge aktiverat.' : 'Ljust läge aktiverat.');
 }
