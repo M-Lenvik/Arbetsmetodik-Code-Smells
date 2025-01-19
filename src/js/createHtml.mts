@@ -1,4 +1,5 @@
 import getPodcasts from './api.mts';
+import { log } from './consolelog.mts';
 
 const podCastContainer = document.querySelector('#podlist-pods');
 
@@ -73,5 +74,6 @@ export async function createHtml() {
 
     //Lägg till hela artikeln i containern
     podCastContainer.appendChild(podcastArticle);
+    log(podcast);
   });
 }
