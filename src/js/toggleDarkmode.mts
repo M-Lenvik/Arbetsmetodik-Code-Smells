@@ -1,9 +1,11 @@
+import { log } from './consolelog.mts';
+
 const toggleLightModeButton = document.querySelector('#toggle-btn');
 
 // Kontrollera om knappen hittades
 if (toggleLightModeButton) {
   toggleLightModeButton.addEventListener('click', toggleLightMode);
-  console.log(toggleLightModeButton);
+  log(toggleLightModeButton);
 } else {
   console.warn('Knappen med id "toggle-btn" hittades inte.');
 }
@@ -21,5 +23,5 @@ function updateToggleButtonText() {
       ? 'Välj mörkt läge'
       : 'Välj ljust läge';
   }
-  console.log(isDarkMode ? 'Mörkt läge aktiverat.' : 'Ljust läge aktiverat.');
+  log(isDarkMode ? 'Mörkt läge aktiverat.' : 'Ljust läge aktiverat.');
 }
