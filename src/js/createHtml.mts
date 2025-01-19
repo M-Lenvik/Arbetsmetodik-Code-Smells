@@ -27,11 +27,16 @@ export async function createHtml() {
     return;
   }
 
+  //Kontrollera om containern hittas
+  if (!podCastContainer) {
+    console.error("Elementet med id 'podlist-pods' hittades inte.");
+    throw new Error('Kritisk fel: Behållaren för podcasts saknas.');
+  }
+
   podCasts.programs.forEach((podcast) => {
     //Skapa artikel-element för varje podcast
     const innerArticle = createElement('article', {
       class: 'podlist__pod',
-      tabindex: '1',
     });
 
     //Skapa bild för podcast
@@ -59,18 +64,12 @@ export async function createHtml() {
     const link = createElement(
       'a',
       {
+        'aria-label': `Lyssna här till podden ${podcast.name}`, //Text som skärmuppläsaren läser upp
         href: podcast.programurl,
-        tabindex: '1',
       },
       'Lyssna här'
     );
     textDiv.appendChild(link);
-
-    //Kontrollera om containern hittas
-    if (!podCastContainer) {
-      console.error("Elementet med id 'podlist-pods' hittades inte.");
-      throw new Error('Kritisk fel: Behållaren för podcasts saknas.');
-    }
 
     //Lägg till hela artikeln i containern
     podCastContainer.appendChild(innerArticle);
