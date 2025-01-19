@@ -2,8 +2,13 @@ import getPodcasts from './api.mts';
 
 const podCastContainer = document.querySelector('#podlist-pods');
 
-// Funktion för att skapa ett HTML-element med attribut
-function createElement(tag, attributes = {}, textContent = '') {
+//Funktion för att skapa ett HTML-element med attribut
+//Funktionens parametrar sätts till string
+function createElement(
+  tag: string,
+  attributes: Record<string, string> = {},
+  textContent: string = ''
+) {
   const element = document.createElement(tag);
   Object.entries(attributes).forEach(([key, value]) =>
     element.setAttribute(key, value)
@@ -17,14 +22,19 @@ function createElement(tag, attributes = {}, textContent = '') {
 export async function createHtml() {
   const podCasts = await getPodcasts();
 
+  if (!podCasts) {
+    console.error('Kunde inte hämta podcasts');
+    return;
+  }
+
   podCasts.programs.forEach((podcast) => {
-    // Skapa artikel-element för varje podcast
+    //Skapa artikel-element för varje podcast
     const innerArticle = createElement('article', {
       class: 'podlist__pod',
       tabindex: '1',
     });
 
-    // Skapa bild för podcast
+    //Skapa bild för podcast
     const img = createElement('img', {
       src: podcast.socialimage,
       width: '100',
@@ -33,19 +43,19 @@ export async function createHtml() {
     });
     innerArticle.appendChild(img);
 
-    // Skapa text-container för info
+    //Skapa text container för info
     const textDiv = createElement('div', { class: 'podlist__pod-info' });
     innerArticle.appendChild(textDiv);
 
-    // Lägg till rubrik
+    //Lägg till rubrik
     const header = createElement('h2', {}, podcast.name);
     textDiv.appendChild(header);
 
-    // Lägg till beskrivning
+    //Lägg till beskrivning
     const description = createElement('p', {}, podcast.description);
     textDiv.appendChild(description);
 
-    // Lägg till länk
+    //Lägg till länk
     const link = createElement(
       'a',
       {
@@ -56,13 +66,13 @@ export async function createHtml() {
     );
     textDiv.appendChild(link);
 
-    // Kontrollera om behållaren hittades
+    //Kontrollera om containern hittas
     if (!podCastContainer) {
       console.error("Elementet med id 'podlist-pods' hittades inte.");
       throw new Error('Kritisk fel: Behållaren för podcasts saknas.');
     }
 
-    // Lägg till hela artikeln i containern
+    //Lägg till hela artikeln i containern
     podCastContainer.appendChild(innerArticle);
   });
 }
