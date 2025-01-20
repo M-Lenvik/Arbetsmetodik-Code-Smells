@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Bzh4RYwL)
-
 # Kurs: Arbetsmetodik
 
 ## Beskrivning av sidan
@@ -16,9 +14,9 @@
 
 ## Uppgift: Fixa koden
 
-<p>Uppgiften var att fixa till en rörig kod som från början inte fungerade. <br>
-**Uppgiftsbeskrivning**
-Du har precis fått din första praktikplats på webbyrån Wundermålig AB, och din första uppgift är att fixa till kod som en annan utvecklare lämnat efter sig. Koden håller ungefär samma standard som företagsnamnet.</p>
+Uppgiften var att fixa till en rörig kod som från början inte fungerade. <br>
+**Uppgiftsbeskrivning** <br>
+Du har precis fått din första praktikplats på webbyrån Wundermålig AB, och din första uppgift är att fixa till kod som en annan utvecklare lämnat efter sig. Koden håller ungefär samma standard som företagsnamnet.
 
 ## Kom igång med projektet
 
