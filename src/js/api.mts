@@ -1,3 +1,5 @@
+import { log } from './consolelog.mts';
+
 const PODCASTS_API_URL =
   'https://api.sr.se/api/v2/programs/index?programcategoryid=133&format=json&pagination=false&indent=true&filter=program.archived&filterValue=false';
 
@@ -32,5 +34,5 @@ export async function getPodcasts(): Promise<PodcastsResponse | null> {
     return null;
   }
 }
-
+log('API OK');
 export default getPodcasts;

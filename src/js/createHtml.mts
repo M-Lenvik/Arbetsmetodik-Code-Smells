@@ -1,4 +1,5 @@
 import getPodcasts from './api.mts';
+import { log } from './consolelog.mts';
 
 const podCastContainer = document.querySelector('#podlist-pods');
 
@@ -27,11 +28,16 @@ export async function createHtml() {
     return;
   }
 
+  //Kontrollera om containern hittas
+  if (!podCastContainer) {
+    console.error("Elementet med id 'podlist-pods' hittades inte.");
+    throw new Error('Kritisk fel: Behållaren för podcasts saknas.');
+  }
+
   podCasts.programs.forEach((podcast) => {
     //Skapa artikel-element för varje podcast
-    const innerArticle = createElement('article', {
+    const podcastArticle = createElement('article', {
       class: 'podlist__pod',
-      tabindex: '1',
     });
 
     //Skapa bild för podcast
@@ -41,38 +47,33 @@ export async function createHtml() {
       height: '100',
       alt: podcast.name || 'Podcast-bild',
     });
-    innerArticle.appendChild(img);
+    podcastArticle.appendChild(img);
 
     //Skapa text container för info
-    const textDiv = createElement('div', { class: 'podlist__pod-info' });
-    innerArticle.appendChild(textDiv);
+    const podcastInfoDiv = createElement('div', { class: 'podlist__pod-info' });
+    podcastArticle.appendChild(podcastInfoDiv);
 
     //Lägg till rubrik
     const header = createElement('h2', {}, podcast.name);
-    textDiv.appendChild(header);
+    podcastInfoDiv.appendChild(header);
 
     //Lägg till beskrivning
-    const description = createElement('p', {}, podcast.description);
-    textDiv.appendChild(description);
+    const podcastDescription = createElement('p', {}, podcast.description);
+    podcastInfoDiv.appendChild(podcastDescription);
 
     //Lägg till länk
-    const link = createElement(
+    const startPodcastLink = createElement(
       'a',
       {
+        'aria-label': `Lyssna här till podden ${podcast.name}`, //Text som skärmuppläsaren läser upp
         href: podcast.programurl,
-        tabindex: '1',
       },
       'Lyssna här'
     );
-    textDiv.appendChild(link);
-
-    //Kontrollera om containern hittas
-    if (!podCastContainer) {
-      console.error("Elementet med id 'podlist-pods' hittades inte.");
-      throw new Error('Kritisk fel: Behållaren för podcasts saknas.');
-    }
+    podcastInfoDiv.appendChild(startPodcastLink);
 
     //Lägg till hela artikeln i containern
-    podCastContainer.appendChild(innerArticle);
+    podCastContainer.appendChild(podcastArticle);
+    log(podcast);
   });
 }
