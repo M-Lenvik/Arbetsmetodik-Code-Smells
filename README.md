@@ -54,10 +54,10 @@ Titta gärna här för att se sidan live:
 
 **För VG**
 - [ ] Rätt sak på rätt plats
-- [ ] Hantera loggning på ett effektivt sätt
+- [x] Hantera loggning på ett effektivt sätt
 - [x] Gör en tillgänglighetsgranskning av sidan
 - [x] Utnyttja features i Sass i CSS:en
-- [ ] Rensa bort paket som inte används
+- [x] Rensa bort paket som inte används
 - [ ] Hantera fel i API-anropet
 - [ ] Gör en Lighthouse-analys
 - [ ] Läs av utvecklingsmiljön
