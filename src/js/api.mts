@@ -13,6 +13,7 @@ export interface Podcast {
 export interface PodcastsResponse {
   programs: Podcast[];
 }
+log('API OK');
 
 //Funktion för att hämta podcasts
 export async function getPodcasts(): Promise<PodcastsResponse | null> {
@@ -29,8 +30,21 @@ export async function getPodcasts(): Promise<PodcastsResponse | null> {
     return data;
   } catch (error) {
     console.error('Något gick fel vid hämtning av podcasts:', error);
+
+    errorMessageToUser(
+      'Laddning av podcasts misslyckades. Vänligen försök igen senare.'
+    );
+
     return null;
   }
 }
-log('API OK');
+
+function errorMessageToUser(message: string) {
+  const errorCatchingAPI = document.querySelector('#podlist-pods');
+
+  if (errorCatchingAPI) {
+    errorCatchingAPI.innerHTML = `<p style="color: red; font-weight: bold;">${message}</p>`;
+  }
+}
+
 export default getPodcasts;
