@@ -5,17 +5,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   background-color: $project-theme--light-color;
-
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
+
 .podlist {
   .podlist__pod {
     display: flex;
@@ -62,12 +61,12 @@ p {
 }
 
 a {
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   cursor: pointer;
 
   &:active,
   &:hover {
-    color: rgb(85, 85, 218);
+    color: rgb(85 85 218);
   }
 }
 
@@ -80,7 +79,7 @@ a {
 
     &:active,
     &:hover {
-      color: rgb(85, 85, 218);
+      color: rgb(85 85 218);
     }
   }
 }
