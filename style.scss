@@ -1,3 +1,6 @@
+$project-theme--dark-color: antiquewhite;
+$project-theme--light-color: #242424;
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
@@ -5,7 +8,7 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: $project-theme--light-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,27 +16,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.podlist {
+  .podlist__pod {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
 
-.podlist__pod {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2rem;
-}
+  .podlist__pod-info {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 
-.podlist__pod-info {
-  display: inline-flex;
-  flex-direction: column;
-  margin-top: 0;
-  margin-left: 1rem;
+  .podlist__title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .podlist__pods {
+    @media screen and (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1440px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 }
 
 img {
   margin-top: 0.5rem;
-}
-
-.podlist__title {
-  font-size: 40px;
-  text-align: center;
 }
 
 h2 {
@@ -49,36 +64,23 @@ p {
 a {
   color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
-}
 
-a:active,
-a:hover {
-  color: rgb(85, 85, 218);
-}
-
-.theme--dark {
-  background-color: antiquewhite;
-  color: #242424;
-}
-
-.theme--dark a {
-  color: #242424;
-}
-
-.theme--dark a:active,
-.theme--dark a:hover {
-  color: rgb(85, 85, 218);
-}
-
-@media screen and (min-width: 1000px) {
-  .podlist__pods {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  &:active,
+  &:hover {
+    color: rgb(85, 85, 218);
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .podlist__pods {
-    grid-template-columns: 1fr 1fr 1fr;
+.theme--dark {
+  background-color: $project-theme--dark-color;
+  color: #242424;
+
+  a {
+    color: #242424;
+
+    &:active,
+    &:hover {
+      color: rgb(85, 85, 218);
+    }
   }
 }
