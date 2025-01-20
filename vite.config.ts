@@ -8,9 +8,11 @@ export default defineConfig({
     target: 'esnext',
     minify: 'esbuild', // Standardvärde, minifierar både JS och CSS
   },
-
   server: {
     open: true, // Öppnar webbläsaren automatiskt
+  },
+  define: {
+    'process.env': {},
   },
   base: './', // Gör att projektet fungerar även vid lokala filsystem
 });
