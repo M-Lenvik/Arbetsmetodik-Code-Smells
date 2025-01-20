@@ -45,7 +45,7 @@ export async function createHtml() {
       src: podcast.socialimage,
       width: '100',
       height: '100',
-      alt: podcast.name || 'Podcast-bild',
+      alt: '',
     });
     podcastArticle.appendChild(img);
 
@@ -68,7 +68,7 @@ export async function createHtml() {
         'aria-label': `Lyssna här till podden ${podcast.name}`, //Text som skärmuppläsaren läser upp
         href: podcast.programurl,
       },
-      'Lyssna här'
+      `Lyssna på "${podcast.name}"`
     );
     podcastInfoDiv.appendChild(startPodcastLink);
 
