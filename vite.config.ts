@@ -6,6 +6,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+    minify: 'esbuild', // Standardvärde, minifierar både JS och CSS
   },
 
   server: {
