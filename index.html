@@ -16,6 +16,16 @@
       property="og:description"
       content="Lyssna på podcasts från Sveriges Radio direkt från denna sida."
     />
+    <!-- Förbättra prestanda genom att föransluta till viktiga domäner -->
+    <link
+      rel="preload"
+      href="/dist/style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.sr.se" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
@@ -30,7 +40,6 @@
       </button>
       <header>
         <h1 class="podlist__title">SRs Humorprogram</h1>
-        <p>#33 Enhetlig syntax i cssen</p>
       </header>
       <article class="podlist__pods" id="podlist-pods"></article>
     </section>
