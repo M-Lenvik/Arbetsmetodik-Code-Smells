@@ -22,7 +22,11 @@ Du har precis fått din första praktikplats på webbyrån Wundermålig AB, och 
 
 Detta är webbsidan, men titta gärna här för att se sidan live:
 [medieinstitutet.github.io/fed24d-arbetsm](https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-M-Lenvik/)
-![Maries lösning på uppgiften](<Arbetsmetodik SR Podcasts.png>)
+![Arbetsmetodik SR Podcasts](https://github.com/user-attachments/assets/cdc04e75-e6f2-4cd5-96c0-d8372e3739f8)
+
+## Lighthousanalys
+<p>Det finns fortfarande några varningar kvar, men på det stora hela nöjde jag mig med detta.</p>
+
 
 ## Tekniker som använts
 
@@ -44,7 +48,7 @@ Detta är webbsidan, men titta gärna här för att se sidan live:
 - [x] Få projektet att funka
 - [x] CSS till Sass
 - [x] Enhetlig namngivning i CSS:en
-- [ ] Konvertera till TypeScript
+- [x] Konvertera till TypeScript
 - [x] Enhetlig kodkvalitet
 - [x] Mobilvyn
 - [x] Språk
@@ -63,8 +67,8 @@ Detta är webbsidan, men titta gärna här för att se sidan live:
 - [x] Gör en tillgänglighetsgranskning av sidan
 - [x] Utnyttja features i Sass i CSS:en
 - [x] Rensa bort paket som inte används
-- [ ] Hantera fel i API-anropet
-- [ ] Gör en Lighthouse-analys
+- [x] Hantera fel i API-anropet
+- [x] Gör en Lighthouse-analys
 - [ ] Läs av utvecklingsmiljön
-- [ ] Enhetlig syntax i CSS:en
+- [x] Enhetlig syntax i CSS:en
 - [ ] Publicera sidan på GitHub pages
