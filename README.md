@@ -25,8 +25,10 @@ Detta är webbsidan, men titta gärna här för att se sidan live:
 ![Arbetsmetodik SR Podcasts](https://github.com/user-attachments/assets/cdc04e75-e6f2-4cd5-96c0-d8372e3739f8)
 
 ## Lighthousanalys
+
 <p>Det finns fortfarande några varningar kvar, men på det stora hela nöjde jag mig med detta.</p>
-![lighthouse](https://github.com/user-attachments/assets/9094cb16-eb71-4293-bc14-17eb50b4d9e9)
+
+![Lighthouse analys](lighthouse.png)
 
 ## Tekniker som använts
 
