@@ -26,7 +26,7 @@ Detta är webbsidan, men titta gärna här för att se sidan live:
 
 ## Lighthousanalys
 <p>Det finns fortfarande några varningar kvar, men på det stora hela nöjde jag mig med detta.</p>
-
+![lighthouse](https://github.com/user-attachments/assets/9094cb16-eb71-4293-bc14-17eb50b4d9e9)
 
 ## Tekniker som använts
 
