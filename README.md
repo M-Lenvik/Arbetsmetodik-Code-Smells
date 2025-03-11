@@ -80,6 +80,8 @@ Detta är webbsidan, men titta gärna här för att se sidan live:
 - [x] Enhetlig syntax i CSS:en
 - [ ] Publicera sidan på GitHub pages
 
+## Betyg
+![alt text](<Betyg Arbetsmetodik för utvecklare Code smells.jpg>)
 
 ## Lighthousanalys
 <p>Det finns fortfarande några varningar kvar, men på det stora hela nöjde jag mig med detta.</p>
