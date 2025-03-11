@@ -3,7 +3,7 @@ Detta är en uppgift att fixa fel i en tilldelad kod. Se uppgiftsbeskrivning ned
 
 Skapad av **Marie Lenvik** <br>
 https://github.com/M-Lenvik
-
+testar frånkoppling
 
 ## Innehållsförteckning
 1. [Beskrivning av sidan](#beskrivning-av-sidan)
