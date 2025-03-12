@@ -1,4 +1,5 @@
 # Kurs: Arbetsmetodik
+## Utbildning till Frontend developer på Medieinstitutet
 Detta är en uppgift att fixa fel i en tilldelad kod. Se uppgiftsbeskrivning nedan.
 
 Skapad av **Marie Lenvik** <br>
